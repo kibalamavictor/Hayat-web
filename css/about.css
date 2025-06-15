@@ -1,0 +1,1070 @@
+/* General Body & Reset */
+body {
+  margin: 0;
+  font-family: "Montserrat", sans-serif; /* Use your chosen font */
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4; /* Light background for general content */
+}
+
+/* Container for Centering Content */
+.container {
+  max-width: 1200px; /* Adjust as needed */
+  margin: 0 auto;
+  padding: 0 20px; /* Padding on sides for smaller screens */
+}
+
+/* --- Header/Navigation Bar --- */
+.main-header {
+  position: absolute; /* Allows it to float over the hero image */
+  width: 100%;
+  z-index: 1000; /* Ensures it's above other elements */
+  padding: 15px 0; /* Vertical padding */
+  box-sizing: border-box; /* Include padding in width/height */
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between; /* Spreads out logo, nav, button */
+  align-items: center; /* Vertically centers items */
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  border-radius: 50px; /* Rounded corners */
+  padding: 10px 25px; /* Inner padding for the white bar */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  max-width: 1000px; /* Limit the width of the bar itself */
+  margin: 0 auto; /* Center the bar */
+}
+
+.logo img {
+  height: 50px; /* Adjust logo size */
+  vertical-align: middle; /* Aligns logo image */
+}
+
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Makes nav items horizontal */
+}
+
+.main-nav ul li {
+  margin-left: 30px; /* Space between nav items */
+}
+
+.main-nav ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover,
+.main-nav ul li a.active {
+  color: #007bff; /* Highlight color for hover and active */
+}
+
+.btn {
+  display: inline-block;
+  background-color: #007bff; /* Primary button color */
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 30px; /* More rounded button */
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* --- Hero Section --- */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 60vh; /* Adjust height as needed (e.g., 70vh for taller) */
+  display: flex;
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
+  color: #fff;
+  text-align: center;
+  overflow: hidden; /* Ensures image doesn't overflow */
+}
+
+.about-hero {
+  /* Replace with your actual image path */
+  background: url("path/to/your/children-background.jpg") no-repeat center
+    center/cover;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Dark overlay to improve text readability */
+  z-index: 1; /* Below the content, above the background image */
+}
+
+.hero-content {
+  position: relative; /* Brings content above the overlay */
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 3.5em; /* Large heading size */
+  margin-bottom: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds depth to text */
+}
+
+/* --- Responsive Design (Media Queries) --- */
+@media (max-width: 900px) {
+  .header-content {
+    max-width: 90%; /* Allow header to take more width on smaller desktops */
+  }
+  .main-nav ul li {
+    margin-left: 20px; /* Reduce spacing */
+  }
+  .hero-content h1 {
+    font-size: 3em;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-content {
+    flex-wrap: wrap; /* Allow items to wrap to next line */
+    justify-content: center; /* Center items when wrapped */
+    padding: 15px 15px;
+    border-radius: 20px; /* Less rounded for smaller screens */
+  }
+
+  .logo {
+    flex-basis: 100%; /* Logo takes full width */
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .main-nav ul {
+    flex-direction: column; /* Stack nav items vertically */
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .main-nav ul li {
+    margin: 5px 0; /* Adjust vertical spacing */
+  }
+
+  .donate-btn {
+    flex-basis: 100%; /* Button takes full width */
+    text-align: center;
+  }
+
+  .hero-section {
+    height: 50vh; /* Reduce hero height on smaller screens */
+  }
+
+  .hero-content h1 {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 2em;
+  }
+}
+
+/* --- Serving Humanity Section --- */
+.serving-humanity-section {
+  padding: 80px 0;
+  background-color: #fff;
+  /* Optional: box-shadow from previous section if it's white */
+  /* box-shadow: 0 -5px 15px rgba(0,0,0,0.05); */
+}
+
+.serving-humanity-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr; /* Image wider than text */
+  gap: 60px;
+  align-items: center;
+}
+
+.image-with-overlay {
+  position: relative;
+  border-radius: 10px; /* Rounded corners for the image container */
+  overflow: hidden; /* Ensures image and overlay stay within bounds */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.image-with-overlay img {
+  width: 100%;
+  height: auto;
+  display: block; /* Removes extra space below image */
+}
+
+.overlay-icon {
+  position: absolute;
+  bottom: -30px; /* Adjust to move it up or down */
+  right: -30px; /* Adjust to move it left or right */
+  width: 150px; /* Size of the orange circle */
+  height: 150px;
+  background-color: #ff7f00; /* Orange color from the image */
+  border-radius: 50%; /* Makes it a circle */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2); /* Shadow for the circle */
+  z-index: 5; /* Ensure it's above the image */
+}
+
+.overlay-icon img {
+  width: 60%; /* Size of the icon inside the circle */
+  height: auto;
+  filter: brightness(0) invert(1); /* Makes the icon white if it's black */
+}
+
+.serving-humanity-content h2 {
+  font-size: 2.8em;
+  color: #333; /* Darker color for this main heading */
+  margin-bottom: 25px;
+  line-height: 1.2;
+}
+
+.serving-humanity-content p {
+  font-size: 1.1em;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* --- Impact Statistics Section --- */
+.impact-statistics-section {
+  padding: 60px 0;
+  background-color: #007bff; /* Blue background */
+  color: #fff;
+  /* text-align: center; */ /* Remove or adjust this if you want left-aligned text within flex items */
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+}
+
+.stat-item {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 30px;
+  border-radius: 10px;
+
+  /* --- NEW/MODIFIED STYLES FOR HORIZONTAL LAYOUT --- */
+  display: flex; /* Make it a flex container */
+  align-items: center; /* Vertically center icon and text */
+  text-align: left; /* Align text within the item to the left */
+  gap: 20px; /* Space between the icon and the text content */
+}
+
+.stat-item:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.stat-icon {
+  font-size: 3em; /* Keep icon size */
+  /* margin-bottom: 15px; */ /* Remove this, as it's no longer needed for vertical spacing */
+  color: #fff;
+  flex-shrink: 0; /* Prevents icon from shrinking if text is long *
+}
+
+.stat-text-content{
+    /* This new wrapper ensures number and description stay stacked */
+  display: flex;
+  flex-direction: column; /* Stack number and description vertically */
+}
+
+.stat-number {
+  display: block; /* Makes it take full width */
+  font-size: 3.5em; /* Large number size */
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.stat-description {
+  /* display: block; */ /* Can remove as flex-direction column handles it */
+  font-size: 0.95em; /* Adjusted slightly for horizontal fit */
+  opacity: 0.9;
+  color: #fff;
+}
+
+/* --- Mission/Vision Blocks below Stats (if you choose to use this layout) --- */
+/*
+.mission-vision-blocks-below-stats {
+    padding: 60px 0;
+    background-color: #f8f8f8;
+}
+
+.mission-vision-boxes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.mission-box,
+.vision-box {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    position: relative;
+    padding-bottom: 100px; // Make space for the icon
+    overflow: hidden;
+}
+
+.mission-box { border-left: 5px solid #007bff; }
+.vision-box { border-left: 5px solid #FF7F00; }
+
+.mission-box p,
+.vision-box p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.mission-box p:first-child,
+.vision-box p:first-child {
+    font-weight: 600;
+    color: #333;
+    font-size: 1.3em;
+}
+
+.mission-box img,
+.vision-box img {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 60px; // Adjust icon size
+    height: auto;
+    opacity: 0.7; // Make icons slightly transparent
+}
+*/
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 900px) {
+  .serving-humanity-grid {
+    grid-template-columns: 1fr; /* Stack on smaller screens */
+    gap: 40px;
+  }
+  .image-with-overlay {
+    order: -1; /* Image appears above text on mobile */
+  }
+  .serving-humanity-content h2 {
+    font-size: 2.2em;
+  }
+  .overlay-icon {
+    width: 100px;
+    height: 100px;
+    bottom: -20px;
+    right: -20px;
+  }
+  /* .mission-vision-boxes {
+        grid-template-columns: 1fr;
+    } */
+}
+
+@media (max-width: 600px) {
+  .serving-humanity-section,
+  .impact-statistics-section {
+    padding: 40px 0;
+  }
+  .serving-humanity-content h2 {
+    font-size: 1.8em;
+  }
+  .stat-number {
+    font-size: 2.8em;
+  }
+  .stat-description {
+    font-size: 1em;
+  }
+  .stat-item {
+    padding: 20px;
+  }
+}
+
+/* --- Adjusting existing styles for a smoother flow if needed --- */
+/*
+If you decide to remove the detailed 'mission-values-section' that contained the full values grid,
+and instead use the summary mission/vision boxes, then you might adjust padding
+or background colors of surrounding sections to maintain visual flow.
+For now, assuming it's removed or placed elsewhere.
+*/
+
+/* --- Mission/Vision Summary Blocks (from image_e79e9f.png) --- */
+.mission-vision-summary-section {
+  padding: 60px 0; /* Adjust padding as needed */
+  background-color: #f8f8f8; /* Light gray background to separate it */
+}
+
+.mission-vision-boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.mission-box,
+.vision-box {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  position: relative; /* For icon positioning */
+  display: flex; /* For text alignment */
+  flex-direction: column; /* Stack text content */
+  justify-content: space-between; /* Push icon to bottom */
+  min-height: 180px; /* Ensure consistent height */
+  overflow: hidden; /* For the icon */
+}
+
+.mission-box {
+  border: 1px solid #007bff;
+} /* Blue border for Mission */
+.vision-box {
+  border: 1px solid #ff7f00;
+} /* Orange border for Vision */
+
+.mission-box .box-title,
+.vision-box .box-title {
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.mission-box .box-description,
+.vision-box .box-description {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 20px; /* Space above icon */
+}
+
+.mission-box .box-icon,
+.vision-box .box-icon {
+  position: absolute;
+  bottom: 20px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  width: 60px; /* Size of the icon */
+  height: auto;
+  opacity: 0.8; /* Make icons slightly transparent */
+}
+
+/* --- What We Do Section --- */
+.what-we-do-section {
+  padding: 80px 0;
+  background-color: #fff2eb; /* Light orange background from the image */
+}
+
+.section-title-tag {
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #ff7f00; /* Orange color for the tag */
+  text-align: center;
+  margin-bottom: 60px; /* Space below the tag */
+  display: block; /* Ensures it takes full width for centering */
+}
+
+.what-we-do-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Responsive 3-column grid */
+  gap: 30px;
+}
+
+.what-we-do-item {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  display: flex; /* For number and content side-by-side */
+  align-items: flex-start; /* Align number to top of content */
+  gap: 15px; /* Space between number and content */
+  border-top: 5px solid #ff7f00; /* Orange top border */
+  position: relative; /* For the top-right icons */
+}
+
+/* Optional: Top right icons on What We Do items - these were very subtle in the image */
+.what-we-do-item::before {
+  content: ""; /* Empty content for pseudo-element */
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 20px; /* Adjust size */
+  height: 20px; /* Adjust size */
+  background-color: #ccc; /* Placeholder for actual icon/graphic */
+  border-radius: 50%;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease;
+}
+
+.what-we-do-item:hover::before {
+  opacity: 0.2; /* Show on hover as a subtle highlight */
+}
+
+.item-number {
+  font-size: 2.5em;
+  font-weight: 700;
+  color: #ff7f00; /* Orange number */
+  line-height: 1; /* Adjust to align with text */
+  flex-shrink: 0; /* Prevents number from shrinking */
+}
+
+.item-content h4 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.item-content p {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 900px) {
+  .mission-vision-boxes {
+    grid-template-columns: 1fr; /* Stack mission/vision on smaller screens */
+  }
+  .mission-box,
+  .vision-box {
+    min-height: unset; /* Remove fixed height on mobile */
+  }
+  .what-we-do-grid {
+    grid-template-columns: 1fr; /* Stack what we do items on mobile */
+  }
+}
+
+@media (max-width: 600px) {
+  .mission-vision-summary-section,
+  .what-we-do-section {
+    padding: 40px 0;
+  }
+  .mission-box .box-title,
+  .vision-box .box-title {
+    font-size: 1.3em;
+  }
+  .what-we-do-item {
+    padding: 25px;
+  }
+  .item-number {
+    font-size: 2em;
+  }
+  .item-content h4 {
+    font-size: 1.3em;
+  }
+}
+
+/* --- Why We Exist / Who We Serve Section --- */
+.why-who-section {
+  background-color: #007bff; /* Blue background */
+  padding: 80px 0;
+  color: #fff;
+  text-align: center; /* Default text alignment for section titles */
+}
+
+.why-who-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr; /* Left content | Divider | Right content */
+  gap: 40px;
+  align-items: center; /* Vertically align items in the grid */
+  max-width: 1000px; /* Limit width of the content inside blue section */
+  margin: 0 auto;
+}
+
+.why-who-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items within each column */
+}
+
+.why-who-item .section-title {
+  font-size: 2.2em;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #fff; /* White title */
+}
+
+.item-illustration {
+  max-width: 250px; /* Adjust size of illustrations */
+  height: auto;
+  margin-bottom: 30px;
+}
+
+.why-who-item .item-text p {
+  font-size: 1.1em;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  opacity: 0.9;
+}
+
+.divider-line {
+  width: 2px; /* Thickness of the line */
+  height: 100%; /* Make it fill the height of the content */
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  ); /* Fading white line */
+  position: relative;
+  display: flex; /* For placing dots */
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0; /* Space for dots */
+}
+
+.divider-line .dot {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5); /* Outer ring for dots */
+  flex-shrink: 0; /* Prevents dots from shrinking */
+}
+
+/* Specific alignment for content within items */
+.why-exist {
+  text-align: right;
+}
+.why-exist .item-illustration {
+  /* Adjust margin for left item image */
+  margin-right: auto;
+}
+.why-exist .item-text {
+  /* Align text to the right for "Why We Exist" */
+  text-align: right;
+}
+
+.who-serve {
+  text-align: left;
+}
+.who-serve .item-illustration {
+  /* Adjust margin for right item image */
+  margin-left: auto;
+}
+.who-serve .item-text {
+  /* Align text to the left for "Who We Serve" */
+  text-align: left;
+}
+
+/* --- Testimonials Section --- */
+.testimonials-section {
+  padding: 80px 0;
+  background-color: #f8f8f8; /* Light grey background */
+}
+
+.testimonials-section .section-title-tag {
+  /* Reusing existing class for "What People Are Saying" */
+  color: #007bff; /* Change color to blue for this section */
+  margin-bottom: 60px; /* Space below the tag */
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Responsive 3-column grid */
+  gap: 30px;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align header and text to left */
+  text-align: left; /* Ensure text alignment */
+}
+
+.testimonial-card .card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 15px; /* Space between image and info */
+}
+
+.testimonial-card .profile-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; /* Circular image */
+  object-fit: cover; /* Ensures image covers the area */
+  border: 2px solid #007bff; /* Blue border around profile pic */
+  flex-shrink: 0; /* Prevents image from shrinking */
+}
+
+.testimonial-card .profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-card .profile-name {
+  font-weight: 600;
+  color: #333;
+  font-size: 1.1em;
+  margin-bottom: 5px;
+}
+
+.testimonial-card .profile-title {
+  font-size: 0.9em;
+  color: #777;
+}
+
+.testimonial-card .testimonial-text {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.6;
+  font-style: italic; /* Matches image */
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 900px) {
+  .why-who-grid {
+    grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    gap: 60px; /* More space when stacked */
+  }
+  .divider-line {
+    width: 100%; /* Make line horizontal */
+    height: 2px; /* Reduce height */
+    flex-direction: row; /* Dots horizontal */
+    margin: 40px 0; /* Space above/below line */
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgba(255, 255, 255, 0.5),
+      transparent
+    ); /* Horizontal gradient */
+  }
+  .why-who-item {
+    text-align: center; /* Center text when stacked */
+  }
+  .why-who-item .item-illustration {
+    /* Center images when stacked */
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr; /* Stack testimonials on smaller screens */
+  }
+}
+
+@media (max-width: 600px) {
+  .why-who-section,
+  .testimonials-section {
+    padding: 40px 0;
+  }
+  .why-who-item .section-title {
+    font-size: 1.8em;
+  }
+  .item-illustration {
+    max-width: 200px;
+  }
+  .why-who-item .item-text p {
+    font-size: 1em;
+  }
+  .testimonial-card {
+    padding: 25px;
+  }
+  .testimonial-card .profile-img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* --- Call to Action Section --- */
+.call-to-action-section {
+  padding: 60px 0; /* Padding around the blue box */
+  background-color: #f4f4f4; /* Match the general page background if desired */
+}
+
+.cta-container {
+  background-color: #007bff; /* Blue background */
+  border-radius: 20px; /* Rounded corners */
+  padding: 50px; /* Inner padding */
+  display: flex;
+  align-items: center; /* Vertically center content */
+  gap: 40px; /* Space between image and text */
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Soft shadow */
+  max-width: 1000px; /* Limit the width of the blue box */
+  margin: 0 auto; /* Center the blue box */
+  position: relative; /* For the image inside */
+}
+
+.cta-image {
+  flex-shrink: 0; /* Prevents image from shrinking */
+  width: 250px; /* Fixed width for the image container */
+  height: 250px; /* Fixed height for the image container */
+  overflow: hidden; /* Ensures image fits within rounded shape */
+  border-radius: 15px; /* Rounded corners for the image container itself */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Shadow for the image */
+}
+
+.cta-image .rounded-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image covers the area */
+  display: block; /* Remove extra space below image */
+}
+
+.cta-content {
+  flex-grow: 1; /* Allows content to take remaining space */
+  text-align: left;
+}
+
+.cta-content h2 {
+  font-size: 2.8em;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #fff; /* White heading */
+  line-height: 1.2;
+}
+
+.cta-content p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.btn-cta {
+  background-color: #fff; /* White background for the button */
+  color: #007bff; /* Blue text color */
+  padding: 12px 30px;
+  font-weight: 700;
+  border-radius: 50px; /* More rounded button */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Button shadow */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-cta:hover {
+  transform: translateY(-2px); /* Slight lift on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* --- Main Footer --- */
+.main-footer {
+  background-color: #fff; /* White background */
+  color: #555;
+  padding-top: 60px; /* Padding for the top section */
+  font-size: 1em;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 3fr 1fr; /* Adjust column widths as needed */
+  gap: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #eee; /* Separator line */
+  align-items: flex-start; /* Align items to the top of their grid cell */
+}
+
+.footer-logo-contact .logo img {
+  height: 60px; /* Adjust logo size for footer */
+  margin-bottom: 20px;
+}
+
+.footer-logo-contact .contact-info p {
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+.footer-logo-contact .contact-info p i {
+  margin-right: 10px;
+  color: #007bff; /* Blue icon color */
+  font-size: 1.1em;
+}
+
+.footer-logo-contact .contact-info a {
+  color: #555;
+  text-decoration: none;
+  display: block; /* Make links block level */
+  margin-left: 30px; /* Indent contact links */
+  margin-bottom: 15px;
+}
+.footer-logo-contact .contact-info a:hover {
+  color: #007bff;
+}
+
+.footer-newsletter h3 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.footer-newsletter p {
+  font-size: 0.9em;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.newsletter-form {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 50px; /* Rounded input */
+  overflow: hidden;
+  background-color: #f9f9f9;
+}
+
+.newsletter-form input {
+  flex-grow: 1; /* Input takes up available space */
+  border: none;
+  padding: 12px 20px;
+  outline: none;
+  font-size: 1em;
+  background-color: transparent;
+}
+
+.newsletter-form .btn-submit {
+  background-color: #007bff; /* Blue submit button */
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 50px; /* Matches form border-radius */
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-form .btn-submit:hover {
+  background-color: #0056b3;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: flex-end; /* Align social icons to the right */
+  align-items: flex-start; /* Align with the top content */
+  gap: 15px; /* Space between icons */
+}
+
+.footer-social a {
+  color: #007bff; /* Blue social icons */
+  font-size: 1.8em;
+  transition: transform 0.2s ease;
+}
+.footer-social a:hover {
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-bottom .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.footer-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px; /* Space between footer nav links */
+  flex-wrap: wrap; /* Allow nav links to wrap */
+  justify-content: center; /* Center links if they wrap */
+}
+
+.footer-nav ul li a {
+  text-decoration: none;
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+.footer-nav ul li a:hover {
+  color: #007bff;
+}
+
+.copyright {
+  font-size: 0.9em;
+  color: #777;
+  margin-top: 10px; /* Space if nav wraps above it */
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 900px) {
+  .cta-container {
+    flex-direction: column; /* Stack image and content */
+    text-align: center;
+    padding: 40px;
+  }
+  .cta-image {
+    margin-bottom: 30px;
+  }
+  .cta-content h2 {
+    font-size: 2.2em;
+  }
+  .footer-top {
+    grid-template-columns: 1fr; /* Stack footer columns */
+    gap: 30px;
+    text-align: center;
+  }
+  .footer-logo-contact .contact-info a {
+    margin-left: 0; /* Remove indent when stacked */
+  }
+  .footer-social {
+    justify-content: center; /* Center social icons */
+  }
+  .footer-bottom .container {
+    flex-direction: column;
+  }
+  .footer-nav ul {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .call-to-action-section,
+  .main-footer {
+    padding: 30px 0;
+  }
+  .cta-container {
+    padding: 30px;
+  }
+  .cta-image {
+    width: 200px;
+    height: 200px;
+  }
+  .cta-content h2 {
+    font-size: 1.8em;
+  }
+  .cta-content p {
+    font-size: 1em;
+  }
+  .newsletter-form {
+    flex-direction: column; /* Stack input and button */
+  }
+  .newsletter-form input {
+    border-radius: 50px;
+    margin-bottom: 10px;
+  }
+  .newsletter-form .btn-submit {
+    width: 100%;
+    border-radius: 50px;
+  }
+}
