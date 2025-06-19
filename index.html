@@ -10,6 +10,117 @@
     <link rel="stylesheet" href="./dist/style.css">
 </head>
 <body>
+    <section class="nav">
+
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="#" class="logo">
+                <img src="./assets/logo.png" alt="Hayat Logo" class="logo-img">
+                </a>
+
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#projects">Our Projects</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li class="mobile-donate-item"><a href="#donate">Donate</a></li>
+                </ul>
+
+                <a href="#donate" class="donate-btn">Donate</a>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    ☰
+                </button>
+            </div>
+        </nav>
+
+
+        <div class="grid">
     
+            <main class="grid__main">
+                <h1>
+                    Give Hope. <br>Change Lives.
+                </h1>
+                <p>
+                    Your support helps orphans eat, villages pray, children learn, and families thrive — right here in Iganga, Uganda.
+                </p>
+                <div class="main__buttons">
+                    <a href="#donate" class="main__buttons__first">Get involved</a>
+                    <a href="#donate" class="main__buttons__second">Learn more</a>
+                </div>
+            </main>
+            <aside class="grid__sidebar">
+                
+                <div class="image1">
+                    <img src="./assets/home kids photo 1.png" alt="children smiling" class="aside__image1" >
+                </div>
+
+                <div class="image2">
+                    <img src="./assets/home kids photo 2.png" alt="children smiling" class="aside__image2" > 
+                </div>
+
+                 <!-- Icon (simple bowl with steam) -->
+                <div class="impact-badge1">
+                    <div class="impact-icon">
+                   
+                        <img src="./assets/impact-icon.png" alt="Impact Icon" class="impact-icon-img">
+                    
+                    </div>
+                    <div class="impact-text"><span>60+</span><span style="margin-left: 10px;"></span>Water wells constructed</div>
+                </div>
+
+
+
+                
+                
+                <!-- Icon (simple bowl with steam) -->
+                <div class="impact-badge2">
+
+                    <div class="impact-text"><span style="margin-right: 20px;"></span><span>5000+</span>meals served annually</div>
+                    <div class="impact-icon">
+                    
+                        <img src="./assets/impact-icon.png" alt="Impact Icon" class="impact-icon-img">
+                    
+                    </div>
+                    
+                </div>
+                    
+                
+                 
+    
+            </aside>
+        </div>
+    </section>
+    
+
+
+
+
+    <!-- <div class="tes">Welcome to Hayat Foundation</div> -->
+        
+    
+
+
+    
+    
+
+     <script>
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            mobileMenuBtn.textContent = navLinks.classList.contains('active') ? '✕' : '☰';
+        });
+
+        // Close mobile menu when clicking on a link
+        navLinks.addEventListener('click', (e) => {
+            if (e.target.tagName === 'A') {
+                navLinks.classList.remove('active');
+                mobileMenuBtn.textContent = '☰';
+            }
+        });
+    </script>
 </body>
 </html>
