@@ -5,42 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us - Hayat</title>
     <link rel="stylesheet" href="contact.css" />
+    <link rel="stylesheet" href="/css/style.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
     />
   </head>
   <body>
-    <header class="main-header">
-      <div class="container">
-        <!-- Logo (image or text) -->
+ <main>
+      <header class="main-header">
+      <div class="container header-content">
         <div class="logo">
-          <!--  Image logo -->
-          <img src="assets/logo.png" alt="Hayat Logo" />
-
-          <!--  Text logo -->
-          Hayat Foundation
+          <a href="index.html">
+            <img
+              src="/assets/logo.png"
+              alt="Hayat Helping Hands Logo"
+            />
+          </a>
         </div>
-
-        <!-- Hamburger icon -->
-        <div class="menu-toggle" id="menu-toggle">&#9776;</div>
-
-        <!-- Navigation Links -->
-        <nav class="nav-links" id="nav-links">
-          <a href="index.html">Home</a>
-          <a href="about.html">About Us</a>
-          <a href="projects.html">Our Projects</a>
-          <a href="gallery.html">Gallery</a>
-          <a href="contact.html" class="active">Contact Us</a>
+        <nav class="main-nav">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About Us</a></li>
+            <li><a href="projects.html">Our Projects</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
         </nav>
-        <!-- Call-to-action button -->
-        <a href="donate.html" class="nav-button">Donate</a>
+        <div class="donate-btn">
+          <a href="donate.html" class="btn">Donate</a>
+        </div>
       </div>
     </header>
 
-    <section class="hero-banner">
-      <div class="header-text">Contact Us</div>
+       <section class="hero-banner">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <h1>Contact Us</h1>
+      </div>
     </section>
+ </main>
+<main>
+   
 
     <section class="contact-card">
       <div class="card">
@@ -105,75 +111,68 @@
         </div>
       </div>
     </section>
+ </section>
 
-    <section class="call-to-action">
-      <div class="cta-image">
-        <img
-          src="assets/95bed92257956cebfd1219d640b4a9540f54c04d.jpg"
-          alt="Happy Kids"
-        />
-      </div>
-      <div class="cta-text">
-        <h2>Ready to Make a Difference?</h2>
-        <p>
-          Join us in transforming lives and communities. Your support matters.
-        </p>
-        <a href="#" class="cta-button">Donate Now</a>
-      </div>
-    </section>
-
-    <footer class="footer-section">
-      <div class="footer-container">
-        <div class="footer-left">
-          <div class="footer-logo">
-            <img src="assets/logo.png" alt="Hayat Aid Organization Logo" />
-          </div>
-          <div class="footer-contact">
-            <div class="footer-contact">
-              <div class="contact-item">
-                <strong>Have a question?</strong><br />
-                📞 +256 788 277 555
-              </div>
-
-              <div class="contact-item">
-                <strong>Contact us at</strong><br />
-
-                <a href="mailto:info@hayataidorganization.org"
-                  >📧info@hayataidorganization.org</a
-                >
-              </div>
+                <section class="call-to-action-section">
+            <div class="container cta-container">
+                <div class="cta-image">
+                    <img src="/assets/project/ready.png" alt="Children smiling" class="rounded-image">
+                </div>
+                <div class="cta-content">
+                    <h2>Ready to Make a Difference?</h2>
+                    <p>Your support feeds orphans, builds wells, and brings hope to hundreds.</p>
+                    <a href="sponsor.html" class="btn btn-cta">Sponsor a Project</a>
+                </div>
             </div>
-          </div>
+        </section>
+    </main>
 
-          <div class="footer-nav-links">
-            <a href="index.html">Home</a>
-            <a href="about.html">About Us</a>
-            <a href="projects.html">Our Projects</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="contact.html">Contact Us</a>
-          </div>
+ 
+    <footer class="main-footer">
+        <div class="container footer-top">
+            <div class="footer-logo-contact">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="/assets/logo.png" alt="Hayat Aid Organization Logo">
+                    </a>
+                </div>
+                <div class="contact-info">
+                    <p><i class="fas fa-phone-alt"></i> Have a question?</p>
+                    <a href="tel:+256788277555">+256 788 277 555</a>
+                    <p><i class="fas fa-envelope"></i> Contact us at</p>
+                    <a href="mailto:info@hayataidorganization.org">info@hayataidorganization.org</a>
+                </div>
+            </div>
+
+            <div class="footer-newsletter">
+                <h3>Newsletter</h3>
+                <p>Be the first one to know about discounts, offers and events. Unsubscribe whenever you like.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-submit">Submit</button>
+                </form>
+            </div>
+
+            <div class="footer-social">
+                <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                </div>
         </div>
 
-        <div class="footer-right">
-          <h4>Newsletter</h4>
-          <p>
-            Be the first one to know about discounts, offers and events.<br />Unsubscribe
-            whenever you like.
-          </p>
-          <form class="newsletter-form">
-            <input type="email" placeholder="Enter your email" required />
-            <button type="submit">Submit</button>
-          </form>
-          <div class="footer-social">
-            <a href="#"><img src="assets/facebook.png" alt="Facebook" /></a>
-            <a href="#"><img src="assets/twitter.png" alt="Twitter" /></a>
-            <a href="#"><img src="assets/whatsapp.png" alt="WhatsApp" /></a>
-          </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="projects.html">Our Projects</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </nav>
+                <p class="copyright">&copy; 2025 All Rights Reserved</p>
+            </div>
         </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 Hayat Foundation, All Rights Reserved</p>
-      </div>
     </footer>
   </body>
 </html>
