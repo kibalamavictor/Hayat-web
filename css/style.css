@@ -405,63 +405,113 @@ For now, assuming it's removed or placed elsewhere.
 */
 
 /* --- Mission/Vision Summary Blocks (from image_e79e9f.png) --- */
-.mission-vision-summary-section {
-  padding: 60px 0; /* Adjust padding as needed */
-  background-color: #f8f8f8; /* Light gray background to separate it */
+.mission-vision-section {
+    display: flex;
+    flex-wrap: wrap; /* Allows boxes to stack on smaller screens */
+    justify-content: center; /* Centers the boxes horizontally */
+    gap: 30px; /* Space between the boxes */
+    margin-top: 60px; /* Space above this section */
+    padding: 0 20px; /* Some padding for smaller screens */
+    max-width: 1200px; /* Matches your main content width */
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.mission-vision-boxes {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
+.box {
+    background-color: var(--white);
+    border: 1px solid #ddd; /* Default border, will be overridden */
+    border-radius: var(--box-border-radius);
+    padding: 30px; /* Padding inside the box */
+    flex: 1 1 450px; /* Allows boxes to grow, shrink, and have a min-width of 450px */
+    max-width: calc(50% - 15px); /* Max width for two boxes side-by-side with gap */
+    text-align: left; /* Text content aligned to the left */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    display: flex; /* Use flexbox for content arrangement inside the box */
+    flex-direction: column; /* Stack title, description, icon vertically */
+    justify-content: space-between; /* Pushes icon to the bottom */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.mission-box,
-.vision-box {
-  background-color: #fff;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-  position: relative; /* For icon positioning */
-  display: flex; /* For text alignment */
-  flex-direction: column; /* Stack text content */
-  justify-content: space-between; /* Push icon to bottom */
-  min-height: 180px; /* Ensure consistent height */
-  overflow: hidden; /* For the icon */
+.box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
+.box-title {
+    font-size: 2em; /* Adjust title size */
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.box-description {
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin-bottom: 25px; /* Space before the icon wrapper */
+    flex-grow: 1; /* Allows description to take up available space, pushing icon down */
+}
+
+/* Specific styling for Mission Box */
 .mission-box {
-  border: 1px solid #007bff;
-} /* Blue border for Mission */
+    border-color: var(--primary-blue);
+}
+
+.mission-box .box-title {
+    color: var(--primary-blue);
+}
+
+.mission-icon {
+    color: var(--primary-blue);
+}
+
+/* Specific styling for Vision Box */
 .vision-box {
-  border: 1px solid #ff7f00;
-} /* Orange border for Vision */
+    border-color: var(--primary-orange);
+}
 
-.mission-box .box-title,
 .vision-box .box-title {
-  font-size: 1.5em;
-  font-weight: 600;
-  color: #333;
-  margin-bottom: 10px;
+    color: var(--primary-orange);
 }
 
-.mission-box .box-description,
-.vision-box .box-description {
-  font-size: 1em;
-  color: #555;
-  line-height: 1.5;
-  margin-bottom: 20px; /* Space above icon */
+.vision-icon {
+    color: var(--primary-orange);
 }
 
-.mission-box .box-icon,
-.vision-box .box-icon {
-  position: absolute;
-  bottom: 20px; /* Adjust as needed */
-  right: 20px; /* Adjust as needed */
-  width: 60px; /* Size of the icon */
-  height: auto;
-  opacity: 0.8; /* Make icons slightly transparent */
+/* Icon Wrapper and Icon Styling */
+.box-icon-wrapper {
+    /* No specific styles needed here other than potential margins if not using flex grow on description */
+    /* If you wanted a fixed size container for the icon regardless of icon size */
+    /* width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; */
 }
+
+.box-icon-wrapper i {
+    font-size: 3em; /* Size of the icon itself, adjust as needed */
+    /* No explicit positioning needed as it's in the flow */
+    /* It will naturally align left within its flex column */
+}
+
+
+/* --- Responsive Adjustments for Mission/Vision Boxes --- */
+@media (max-width: 992px) {
+    .box {
+        max-width: calc(100% - 20px); /* Allow boxes to take full width on smaller screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .box {
+        padding: 25px;
+    }
+    .box-title {
+        font-size: 1.8em;
+    }
+    .box-description {
+        font-size: 1em;
+    }
+    .box-icon-wrapper i {
+        font-size: 2.5em;
+    }
+}
+
 
 /* --- What We Do Section --- */
 .what-we-do-section {
