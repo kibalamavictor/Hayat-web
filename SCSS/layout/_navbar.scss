@@ -36,41 +36,6 @@
             gap: 2rem;
         }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 28px;
-            font-weight: bold;
-            color: #2563eb;
-            text-decoration: none;
-        }
-
-        .logo-icon {
-            width: 40px;
-            height: 40px;
-            background: linear-gradient(135deg, #f59e0b, #2563eb);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 18px;
-            font-weight: bold;
-        }
-
-        .logo-text {
-            display: flex;
-            flex-direction: column;
-            line-height: 1.1;
-        }
-
-        .logo-subtitle {
-            font-size: 12px;
-            font-weight: normal;
-            color: #6b7280;
-            margin-top: -2px;
-        }
 
         .nav-links {
             display: flex;
@@ -87,8 +52,7 @@
         .nav-links a {
             text-decoration: none;
             color: #374151;
-            font-size: 20px;
-            // font-weight: 500;
+            font-size: 18px;
             padding: 0.5rem 1rem;
             border-radius: 6px;
             transition: all 0.3s ease;
