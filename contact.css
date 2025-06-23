@@ -1,6 +1,4 @@
-* {
-  box-sizing: border-box;
-}
+
 
 body {
   font-family: 'Poppins', sans-serif;
@@ -55,59 +53,15 @@ body {
   
 }
 
-/* Hamburger menu (mobile toggle) */
-.menu-toggle {
-  display: none;
-  font-size: 2em;
-  cursor: pointer;
-}
 
-/* Mobile styles */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
 
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background-color: #009ADA;
-    padding: 10px 0;
-  }
 
-  .nav-links a {
-    padding: 10px 20px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-  }
-
-  .nav-links.show {
-    display: flex;
-  }
-}
-.nav-button {
-  background-color:#009ADA; /* ✅ Rich blue */
-  color: white;
-  padding: 10px 18px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-}
-
-.nav-button:hover {
-  background-color: #004070; /* Darker blue on hover */
-}
-
-.hero-banner {
   background-image: url('assets/0264fbba89fa066f6cdb7bce96196138f127d8fc.jpg');
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  height: 400px; /* Set height */
-  text-align: center;
-  color: white;
-  position: relative;
+
+  background-image: url("assets/0264fbba89fa066f6cdb7bce96196138f127d8fc.jpg"); /* replace with your image path */
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -129,10 +83,10 @@ body {
 .hero-banner * {
   position: relative;
   z-index: 1;
+  background-position: center bottom; /* Adjust as needed */
+  background-size: cover;
+
 }
-
-
-
 
 .header-text {
   font-size: 3em;
@@ -140,9 +94,8 @@ body {
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
 }
 
-
 .header {
-  background-image: url('https://via.placeholder.com/1200x300?text=Contact+Us');
+  background-image: url("https://via.placeholder.com/1200x300?text=Contact+Us");
   background-size: cover;
   background-position: center;
   padding: 100px 0;
@@ -152,7 +105,7 @@ body {
   font-weight: bold;
 }
 .contact-card {
-  background-color: #e6f2ff; 
+  background-color: #e6f2ff;
   padding: 40px 20px;
   max-width: 1000px;
   margin: 40px auto;
@@ -165,7 +118,6 @@ body {
   gap: 30px;
   align-items: flex-start;
   position: relative;
-  
 }
 
 /* Divider between form and info */
@@ -219,7 +171,7 @@ body {
 
 .contact-form button {
   background-color: #ffffff;
-  color: #009ADA;
+  color: #009ada;
   padding: 12px 30px;
   border: none;
   border-radius: 8px;
@@ -234,7 +186,7 @@ body {
 .contact-form {
   flex: 1;
   min-width: 300px;
-  background-color: #009ADA; /* ✅ Your desired blue */
+  background-color: #009ada; /* ✅ Your desired blue */
   padding: 30px;
   border-radius: 10px;
   color: black; /* Ensures text is visible on dark background */
@@ -254,7 +206,7 @@ body {
 
 /* Contact Info Links */
 .contact-info a {
-  color: #007BFF;
+  color: #007bff;
   text-decoration: none;
 }
 
@@ -273,7 +225,6 @@ body {
   }
 }
 
-
 .contact-section {
   display: flex;
   flex-wrap: wrap;
@@ -289,11 +240,11 @@ body {
   background-color: #fff;
   padding: 30px;
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
 }
 
 .contact-form h3 {
-  color: #007BFF;
+  color: #007bff;
   margin-bottom: 20px;
 }
 
@@ -308,7 +259,7 @@ body {
 }
 
 .contact-form button {
-  background-color: #007BFF;
+  background-color: #007bff;
   color: white;
   padding: 12px 30px;
   border: none;
@@ -332,7 +283,7 @@ body {
 }
 
 .contact-info a {
-  color: #007BFF;
+  color: #007bff;
   text-decoration: none;
 }
 .call-to-action {
@@ -379,12 +330,11 @@ body {
   background-color: #e0e0e0;
 }
 
-
 .call-to-action {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #007BFF;
+  background-color: #007bff;
   color: white;
   padding: 40px 20px;
   border-radius: 38px;
@@ -424,7 +374,7 @@ body {
 
 .call-to-action .cta-button {
   background-color: #ffffff;
-  color: #007BFF;
+  color: #007bff;
   padding: 12px 25px;
   border-radius: 6px;
   text-decoration: none;
@@ -442,7 +392,6 @@ body {
   }
 
   .call-to-action .cta-image,
-
   .call-to-action .cta-text {
     min-width: 100%;
   }
@@ -490,7 +439,7 @@ body {
 }
 
 .newsletter-content button {
-  background-color: #009ADA;
+  background-color: #009ada;
   color: white;
   padding: 10px 20px;
   border: none;
@@ -538,7 +487,7 @@ body {
 
 .newsletter-content button {
   padding: 10px 20px;
-  background-color: #007BFF;
+  background-color: #007bff;
   border: none;
   color: white;
   border-radius: 6px;
@@ -549,6 +498,7 @@ body {
 .newsletter-content button:hover {
   background-color: #0056b3;
 }
+
 
 .footer {
   background-color: #007BFF;
@@ -1955,3 +1905,4 @@ body {
         font-size: 0.9em;
     }
 }
+
