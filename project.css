@@ -52,6 +52,21 @@ body {
 .donate-btn:hover {
   background: #005fa3;
 }
+/* Floating Header Styles */
+.floating-header {
+  position: fixed;
+  top: 24px; /* or whatever distance you want from the top */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 180px;
+  background: rgba(255,255,255,0.97);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+  z-index: 1000;
+  padding: 0;
+  transition: box-shadow 0.2s;
+}
 
 /* Hero Section - Full Height, No Rounded Corners */
 .hero {
@@ -96,7 +111,7 @@ body {
 
 /* Floating Header Styles */
 .floating-header {
-  position: fixed;
+  position: absolute;
   top: 40px; /* Distance from the top of the hero image */
   left: 50%;
   transform: translateX(-50%);
@@ -296,7 +311,7 @@ body {
   .intro-img {
     margin-top: 20px;
     padding: 0;
-    width: 60vw;
+    width: 30vw;
     max-width: 320px;
   }
   .projects-section {
