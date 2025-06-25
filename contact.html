@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact Us - Hayat Aid</title>
   <link rel="stylesheet" href="contact.css">
+  
   <!-- Google Fonts (Poppins) -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
@@ -12,32 +13,35 @@
 <body>
   <body>
  
-   <!-- Header (floating) -->
+  <!-- Header (floating) -->
    
-  <header class="main-header">
-      <div class="container header-content">
-        <div class="logo">
-          <a href="index.html">
-            <img
-              src="/assets/logo.png"
-              alt="Hayat Helping Hands Logo"
-            />
-          </a>
-        </div>
-        <nav class="main-nav">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html" >About Us</a></li>
-            <li><a href="project.html">Our Projects</a></li>
-            <li><a href="gallery.html" >Gallery</a></li>
-            <li><a href="contact.html" class="active">Contact Us</a></li>
-          </ul>
-        </nav>
-        <div class="donate-btn">
-          <a href="donate.html" class="btn">Donate</a>
-        </div>
+
+  <header class="header floating-header">
+    <div class="container header-flex">
+      <img src="assets/logo.png" alt="Hayat Aid Logo" class="logo">
+      <button class="nav-toggle" aria-label="Open navigation">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="project2.html">Our Projects</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact Us</a>
+      </nav>
+      <a href="#" class="donate-btn">Donate</a>
+      <div class="mobile-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="project2.html">Our Projects</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="#" class="donate-btn">Donate</a>
       </div>
-    </header>
+    </div>
+  </header>
 
   <!-- Hero Section -->
   <section class="hero">
@@ -68,16 +72,25 @@
     </div>
     <div class="contact-info-section">
       <div class="info-item">
-        <strong>Chat with Us:</strong>
-        <span>Live chat available 24/7</span>
+        <img src="assets/project/Group 20.png" alt="Chat Icon" class="info-icon">
+        <div class="info-text">
+          <strong>Chat with Us:</strong>
+          <span>Live chat available 24/7</span>
+        </div>
       </div>
       <div class="info-item">
-        <strong>Call Us:</strong>
-        <span>+256 782 577 598</span>
+        <img src="assets/Light/Light/Icon.png" alt="Phone Icon" class="info-icon">
+        <div class="info-text">
+          <strong>Call Us:</strong>
+          <span>+256 782 577 598</span>
+        </div>
       </div>
       <div class="info-item">
-        <strong>Email Us:</strong>
-        <span>info@hayataiduganda.org</span>
+        <img src="assets/email/Light/Light/Icon.png" alt="Email Icon" class="info-icon">
+        <div class="info-text">
+          <strong>Email Us:</strong>
+          <span>info@hayataiduganda.org</span>
+        </div>
       </div>
     </div>
   </div>
@@ -152,5 +165,14 @@
     </div>
   </div>
 </footer>
+<script>
+// Mobile nav toggle
+const navToggle = document.querySelector('.nav-toggle');
+const mobileNav = document.querySelector('.mobile-nav');
+navToggle.addEventListener('click', function() {
+  mobileNav.classList.toggle('open');
+  navToggle.classList.toggle('open');
+});
+</script>
 </body>
 </html>
