@@ -1326,9 +1326,9 @@ For now, assuming it's removed or placed elsewhere.
 }
 
 /* --- Hero Section Specifics for Projects Page --- */
-.projects-hero {
+.project-hero {
     /* You can set a specific background image for the projects hero if desired */
-    background-image: url('path/to/your/projects-hero-bg.jpg'); /* Example */
+    background-image: url('/assets/hero.png'); /* Example */
     background-position: center bottom; /* Adjust as needed */
     background-size: cover;
 }
