@@ -399,16 +399,19 @@ a {
   box-sizing: border-box;
 }
 .cta-img {
-  padding-left: 24px; /* Pushes the image to the right */
+  padding-left: 20px; /* Pushes the image to the right */
   box-sizing: border-box;
+  padding-right: 24px; /* adds space on the right */
+  padding-bottom: 24px; /* adds space at the bottom */
+  padding-top: 24px; /*  adds space at the top */
 }
 
 .cta-img img {
-  width: 180px;
-  height: 100%;
+  width: 498px;
+  height: 198px;
   object-fit: cover;
   display: block;
-  border-radius: 8px; /* Optional: for a softer look */
+  border-radius: 19px; /* for a softer look */
 }
 .cta-content {
   padding: 32px 36px;
