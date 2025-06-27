@@ -97,6 +97,10 @@ body {
   background: url("/assets/about/hero.jpg") no-repeat center
     center/cover;
 }
+.gallery-hero{
+  background: url("/assets/gallery-background.png") no-repeat center
+    center/cover;
+}
 
 .hero-overlay {
   position: absolute;
